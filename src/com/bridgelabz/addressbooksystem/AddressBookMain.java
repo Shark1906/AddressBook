@@ -1,43 +1,41 @@
 package com.bridgelabz.addressbooksystem;
 
-public class AddressBookMain {
-	
-	private final String firstName;
-	private final String lastName;
-	private final String address;
-	private final String city;
-	private final String state;
-	private final String email;
-	private final String zip;
-	private final String phone;
+import java.util.Scanner;
 
-	public AddressBookMain(String firstName, String lastName, String address, String city, String state, String email,
-			String zip, String phone) {
-		super();
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.address = address;
-		this.city = city;
-		this.state = state;
-		this.email = email;
-		this.zip = zip;
-		this.phone = phone;
-	}
-	
+public class AddressBookMain {
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter Firstname");
+		String firstName = sc.next();
+		System.out.println("Enter Lastname");
+		String lastName = sc.next();
+		System.out.println("Enter Address");
+		String address = sc.next();
+		System.out.println("Enter City");
+		String city = sc.next();
+		System.out.println("Enter State");
+		String state = sc.next();
+		System.out.println("Enter Email");
+		String email = sc.next();
+		System.out.println("Enter Zip");
+		String zip = sc.next();
+		System.out.println("Enter Phone");
+		String phone = sc.next();
+	
 		System.out.println("Welcome to Address Book Program");
-		AddressBookMain addressBookMain = new AddressBookMain("Aman", "Raj", "New Area", "Dehri on sone",
+		ContactsOperations contactsOperations = new ContactsOperations();
+		Contacts contacts1 = new Contacts("Aman", "Raj", "New Area", "Dehri on sone",
 				"Bihar", "aman@gmail.com", "821305", "9988776655" );
-		System.out.println(addressBookMain);
+		contactsOperations.addContact(contacts1);
+		System.out.println(contactsOperations.getList());
+		Contacts contacts2 = new Contacts(firstName, lastName, address, city, state, email, zip, phone);
+		contactsOperations.addContact(contacts2);
+		System.out.println(contactsOperations.getList());
 		
-
 	}
 
-	@Override
-	public String toString() {
-		return "[firstName=" + firstName + ", lastName=" + lastName + ", address=" + address + ", city="
-				+ city + ", state=" + state + ", email=" + email + ", zip=" + zip + ", phone=" + phone + "]";
-	}
+	
 
 }
