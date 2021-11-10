@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ContactsOperations {
-private List<Contacts> contactList = new  ArrayList();
+private List<Contacts> contactList = new  ArrayList<>();
 	
 	public void addContact(Contacts contacts) {
 		contactList.add(contacts);
@@ -13,4 +13,15 @@ private List<Contacts> contactList = new  ArrayList();
 	public List getList() {
 		return contactList;
 	}
+	
+	public Contacts removeContactByName(String name) {
+			for(Contacts contacts :contactList) {
+				if(contacts.firstName.equals(name)) {
+					contactList.remove(contacts);
+					return null;
+				}
+			}
+			return null;
+	}
+
 }

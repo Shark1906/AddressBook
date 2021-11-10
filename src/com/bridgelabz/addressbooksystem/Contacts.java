@@ -2,14 +2,14 @@ package com.bridgelabz.addressbooksystem;
 
 public class Contacts {
 	
-	private final String firstName;
-	private final String lastName;
-	private final String address;
-	private final String city;
-	private final String state;
-	private final String email;
-	private final String zip;
-	private final String phone;
+	String firstName;
+	String lastName;
+	String address;
+	String city;
+	String state;
+	String email;
+	String zip;
+	String phone;
 	
 	public Contacts(String firstName, String lastName, String address, String city, String state, String email,
 			String zip, String phone) {
