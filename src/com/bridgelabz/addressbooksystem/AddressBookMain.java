@@ -9,12 +9,16 @@ public class AddressBookMain {
 		Contacts contacts1 = new Contacts("Aman", "Raj", "NewArea", "Dehri on sone",
 				"Bihar", "aman@gmail.com", "821305", "9988776655" );
 		contactsOperations.addContact(contacts1);
-		System.out.println(contactsOperations.getList());
+		contactsOperations.printAllContacts();
 		contactsOperations.addNewContact();
-		System.out.println(contactsOperations.getList());
+		contactsOperations.printAllContacts();
+		contactsOperations.addNewContact();
+		contactsOperations.printAllContacts();
+		contactsOperations.addNewContact();
+		contactsOperations.printAllContacts();
 		contactsOperations.removeContactByName();
-		System.out.println(contactsOperations.getList());
+		contactsOperations.printAllContacts();
 		contactsOperations.editContact();
-		System.out.println(contactsOperations.getList());
+		contactsOperations.printAllContacts();
 	}
 }
