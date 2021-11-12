@@ -40,6 +40,13 @@ private List<Contacts> contactList = new  ArrayList<>();
 		return contactList;
 	}
 	
+	public void printAllContacts() {
+		for (int i = 0; i < contactList.size(); i++) {
+			System.out.println(contactList.get(i));
+			
+		}
+	}
+	
 	
 	public Contacts removeContactByName() {
 		System.out.println("Enter Firstname of Contact to delete");
